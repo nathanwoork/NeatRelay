@@ -141,8 +141,8 @@
       const own = all.filter((t) => t.workstream === s.id), done = own.filter((t) => t.status === 'done').length;
       return `<div class="workstream-item"><div class="workstream-top"><strong>${esc(s.name)}</strong><span>${done} / ${own.length} done</span></div><div class="progress-bar" role="progressbar" aria-label="${esc(s.name)} complete" aria-valuemin="0" aria-valuemax="${Math.max(1, own.length)}" aria-valuenow="${done}"><span style="width:${own.length ? done / own.length * 100 : 0}%"></span></div><p>${esc(s.summary)}</p></div>`;
     }).join('');
-    return pageHeading('A CLEARER WAY TO WORK', 'Make room for the work that matters.', 'Your first month, in one place. Shape the offer, build the system, and decide what deserves your attention.', external(data.trelloUrl, 'Open Trello')) +
-      `<section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><span class="eyebrow">${esc(brandName.toUpperCase())} / THE FIRST CHAPTER</span><h2 id="hero-title">${esc(text(brand.tagline, 'Less chasing. Clearer work.'))}</h2><p>A practical home for the decisions, small experiments and steady follow-through that build your workflow consultancy.</p><div class="hero-actions"><a class="button" href="#plan">Explore your 30-day plan ${icon('arrow')}</a><a class="small-link" href="#strategy">The bigger picture ↗</a></div></div><div class="relay-art" aria-hidden="true"><div class="relay-flow"><div class="relay-node"><i></i><b>01</b><span>MAKE CLEAR</span></div><span class="relay-line"></span><div class="relay-node"><i></i><b>02</b><span>MAKE IT WORK</span></div><span class="relay-line"></span><div class="relay-node"><i></i><b>03</b><span>KEEP IT NEAT</span></div></div><span class="hero-art-label">A THOUGHTFUL HANDOFF, EVERY TIME.</span></div></section>` +
+    return pageHeading('NATHAN’S WORKSPACE / MONTH 01', 'A little clarity. A lot more room.', 'Your launch, at a glance. Follow the next useful step and see how the whole plan is taking shape.', external(data.trelloUrl, 'Open Trello')) +
+      `<div class="launch-grid"><section class="launch-note"><span class="eyebrow">THE FIRST CHAPTER</span><h2>Less chasing.<br><span>Clearer work.</span></h2><p>One focused offer. One useful workflow. Build a practice you can run.</p><a class="button" href="#plan">Explore your 30-day plan ${icon('arrow')}</a><span class="launch-stamp" aria-hidden="true">↗</span></section><section class="progress-panel" aria-label="Launch plan completion"><h2>The plan in motion</h2><div class="progress-dial"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="48"/><circle class="dial-value" cx="60" cy="60" r="48" stroke-dasharray="${all.length ? counts.done / all.length * 301.593 : 0} 301.593"/></svg><strong>${all.length ? Math.round(counts.done / all.length * 100) : 0}<span>%</span><small>tasks complete</small></strong></div><ul class="progress-key">${Object.entries(STATUS).map(([key,label])=>`<li><i style="--key:${({planned:'#a7b1a5',ready:'#6daccf','in-progress':'#b28a06',blocked:'#c4664b',done:'#006b60'})[key]}" aria-hidden="true"></i>${label}<b>${counts[key]}</b></li>`).join('')}</ul><p>${counts.done} of ${all.length} tasks complete · Based on saved task statuses, not business performance.</p></section></div>` +
       `<section class="stats-grid" aria-label="Task summary">${[
         ['Tasks in the plan', all.length, 'Across every workstream', 'board', ''], ['In progress', counts['in-progress'], 'Currently being worked on', 'clock', ''], ['Completed', counts.done, all.length ? `${Math.round(counts.done / all.length * 100)}% of the plan complete` : 'No tasks completed yet', 'check', 'stat-done'], ['Needs attention', counts.blocked, 'Tasks marked as blocked', 'flag', '']
       ].map(([label, value, sub, name, cls]) => `<div class="stat-card ${cls}"><div class="stat-top"><span>${label}</span><span class="stat-icon">${icon(name)}</span></div><strong>${value}</strong><small>${sub}</small></div>`).join('')}</section>` +
@@ -194,7 +194,7 @@
       `<div class="resource-grid"><section class="panel"><div class="panel-header"><div><h2>People to bring in deliberately</h2><p>Each role should solve a defined problem.</p></div></div>${people.length ? people.map((p) => `<article class="person-item"><h3>${esc(p.role)}</h3><div class="person-meta">${p.when ? `<span class="mini-tag">${esc(text(p.when))}</span>` : ''}${p.budget ? `<span class="mini-tag">${esc(text(p.budget))}</span>` : ''}</div><p>${esc(text(p.scope))}</p></article>`).join('') : '<p class="form-help">No outside roles have been added to the plan.</p>'}</section><section class="panel"><div class="panel-header"><div><h2>A useful learning shelf</h2><p>Choose resources that support the next task.</p></div></div>${learning.length ? learning.map((l) => safeUrl(l.url) ? `<a class="resource-link" href="${esc(safeUrl(l.url))}" target="_blank" rel="noopener noreferrer"><strong>${esc(l.title)}<span aria-hidden="true">↗</span></strong><p>${esc(l.why)}</p></a>` : `<div class="resource-link"><strong>${esc(l.title)}</strong><p>${esc(l.why)}</p></div>`).join('') : '<p class="form-help">Learning resources will appear here when added.</p>'}</section></div>`;
   }
   function renderStrategy() {
-    const defaultPalette = { Ink: '#17233D', Paper: '#F5F7FA', Teal: '#007F78', Mint: '#D9F7EA' };
+    const defaultPalette = { Ink: '#202725', Canvas: '#F3F4EF', Teal: '#006B60', Mint: '#C4EDCE', Coral: '#FF875F', Lilac: '#BCACF1', Yellow: '#F4D35D', Sky: '#A9D8F0' };
     let colors = brand.palette && typeof brand.palette === 'object' && !Array.isArray(brand.palette) ? Object.entries(brand.palette) : [];
     colors = colors.filter(([, c]) => typeof c === 'string' && /^#[0-9a-fA-F]{6}$/.test(c)).slice(0, 8);
     if (!colors.length) colors = Object.entries(defaultPalette);
@@ -292,7 +292,7 @@
   function toggleMobile(open) {
     const sidebar = $('#sidebar'), button = $('#menu-toggle');
     sidebar.classList.toggle('open', open); $('#mobile-scrim').hidden = !open; button.setAttribute('aria-expanded', String(open)); button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-    sidebar.inert = window.innerWidth <= 680 && !open;
+    sidebar.inert = window.innerWidth <= 900 && !open;
     if (open) $('.nav-link.active')?.focus();
   }
 
@@ -376,11 +376,11 @@
     }
   });
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 680 && $('#sidebar').classList.contains('open')) toggleMobile(false);
-    $('#sidebar').inert = window.innerWidth <= 680 && !$('#sidebar').classList.contains('open');
+    if (window.innerWidth > 900 && $('#sidebar').classList.contains('open')) toggleMobile(false);
+    $('#sidebar').inert = window.innerWidth <= 900 && !$('#sidebar').classList.contains('open');
   });
   window.addEventListener('hashchange', () => { const view = location.hash.slice(1); activeView = Object.hasOwn(VIEWS, view) ? view : 'overview'; toggleMobile(false); render(); window.scrollTo(0, 0); $('#main').focus({ preventScroll: true }); });
   window.addEventListener('storage', (event) => { if (event.key === STORAGE_KEY) notify('This workspace changed in another tab. Refresh to load its latest local copy.'); });
   render();
-  $('#sidebar').inert = window.innerWidth <= 680;
+  $('#sidebar').inert = window.innerWidth <= 900;
 })();

@@ -6,13 +6,15 @@ window.PROJECT_DATA = {
     "vision": "Small business owners can run a growing team without personally chasing every next step.",
     "mission": "Turn messy daily work into clear, teachable processes, then implement and maintain the smallest useful system the team can own.",
     "palette": {
-      "ink": "#17233D",
-      "canvas": "#F5F7FA",
-      "primary": "#007F78",
-      "accent": "#D9F7EA",
-      "surface": "#FFFFFF",
-      "blueAlternative": "#2448BD"
-    }
+      "Ink": "#202725",
+      "Canvas": "#F3F4EF",
+      "Teal": "#006B60",
+      "Mint": "#C4EDCE",
+      "Coral": "#FF875F",
+      "Lilac": "#BCACF1",
+      "Yellow": "#F4D35D",
+      "Sky": "#A9D8F0"
+}
   },
   "asOf": "2026-10-06",
   "trelloUrl": "https://trello.com/b/EkpD9cQ1",

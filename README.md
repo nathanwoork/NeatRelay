@@ -87,3 +87,7 @@ Recommended release checks: 320px and desktop widths; keyboard navigation and Es
 ## Limitations
 
 This is a single-person planning dashboard. It does not provide authentication, shared real-time edits, notifications, scheduled monitoring, invoices, payments, live financial reporting or automatic task execution. Reference links and service prices are planning inputs that require validation. Simultaneous tabs are not merged automatically; a notification asks you to refresh when another tab changes local state.
+
+## Relay Spectrum redesign · 12 October 2026
+
+The current visual language is Relay Spectrum. See [the visual guide](design-system.html) and [design documentation](DESIGN-LANGUAGE.md). Shared assets: relay-tokens.css, fonts.css and FONT-LICENSES.txt; relay-theme.css contains this site’s application. Fonts are locally embedded under SIL OFL. Existing behaviour and storage remain unchanged.
