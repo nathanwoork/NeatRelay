@@ -1,4 +1,4 @@
-/* Public planning snapshot: no automatic Trello sync. */
+/* Public planning snapshot; no automatic Trello sync. Updated 13 October 2026. */
 window.PROJECT_DATA = {
   "brand": {
     "name": "NeatRelay",
@@ -14,9 +14,9 @@ window.PROJECT_DATA = {
       "Lilac": "#BCACF1",
       "Yellow": "#F4D35D",
       "Sky": "#A9D8F0"
-}
+    }
   },
-  "asOf": "2026-10-06",
+  "asOf": "2026-10-13",
   "trelloUrl": "https://trello.com/b/EkpD9cQ1",
   "githubUrl": "https://github.com/nathanwoork/NeatRelay",
   "workstreams": [
@@ -473,9 +473,9 @@ window.PROJECT_DATA = {
     },
     {
       "name": "One-Flow Pilot",
-      "price": "RM1,800 · test price",
-      "scope": "One intake form, one board, up to two basic internal reminder rules, SOP, handover and a fourteen-day observation period. Up to five users; about 12–20 delivery hours.",
-      "exclusions": "Custom apps, complex API/accounting/WhatsApp integration, migration, executing payments, unlimited revisions or 24/7 support. Diagnostic is separate."
+      "price": "Scoped quote · after assessment",
+      "scope": "Observe one agreed process; map gaps and improvements; create a Google Sheets dashboard/recording template; deliver a process playbook with SOP, roles and handover checklist; walkthrough and bounded implementation questions. KL/Selangor; small scopes may take 2–3 weeks, confirmed in the quote.",
+      "exclusions": "Whole-company policies, regulated/safety-critical work, accounting sign-off, complex integrations, unbounded cleanup/revisions and emergency support. Custom web dashboards, additional sites/processes and specialist inputs separately scoped."
     },
     {
       "name": "Keep It Running",
@@ -520,8 +520,8 @@ window.PROJECT_DATA = {
     {
       "role": "Nathan · consultant and delivery owner",
       "when": "Month one",
-      "scope": "Own diagnosis, scope, synthetic demo, documentation and decisions. Astra supports research, practice and drafts.",
-      "budget": "60 founder hours; no employee required"
+      "scope": "Observe operations, diagnose one process, write agreed SOP/roles/handbook, build a Sheets dashboard and guide implementation. Codex assists; Nathan reviews and owns delivery.",
+      "budget": "Nathan states at least 30 hours/week available; one active pilot at a time"
     },
     {
       "role": "Independent automation mentor/reviewer",
@@ -624,14 +624,14 @@ window.PROJECT_DATA = {
       "detail": "English-led naming and teal palette are proposed. Public-web screening is limited; SSM, trademark, domain and handle checks remain pending."
     },
     {
-      "title": "Creative/marketing studios, 2–8 people",
+      "title": "One process in a small local business",
       "status": "Hypothesis",
-      "detail": "Selected for a remotely demonstrable handoff problem. Owner age informs tone, not eligibility. Demand and ability to pay are unvalidated."
+      "detail": "Nathan can start with staff handover, onboarding or stock recording in KL/Selangor. The first buyer is unconfirmed; select by problem fit, authority and capacity rather than claiming every industry."
     },
     {
-      "title": "A quiet first month",
-      "status": "Planning assumption",
-      "detail": "Four relative weeks at fifteen hours each: understand, build, package and prepare. No outreach is required during the sixty-hour preparation month."
+      "title": "Prioritise the first paid freelance pilot",
+      "status": "Nathan’s current direction",
+      "detail": "13 October: prepare a working handover demo and scoped offer, then seek a buyer through networking. Cheras base, KL/Selangor observation, Google Sheets and at least thirty hours/week available. No buyer or sale confirmed."
     },
     {
       "title": "Modern tools, practical management",
@@ -639,9 +639,9 @@ window.PROJECT_DATA = {
       "detail": "Use asynchronous intake, visual maps and modest automation; retain clear owners, approval rules, training and a manual fallback."
     },
     {
-      "title": "Pilot pricing replaces the old package mix",
+      "title": "Pilot fees follow scope",
       "status": "Reforecast required",
-      "detail": "RM650 / RM1,800 / RM450 are test prices. The earlier RM6,000 setup forecast cannot support decisions for this narrower pilot. Reforecast before hiring, debt or expansion."
+      "detail": "One-Flow Pilot now covers observation, dashboard and process documents. RM1,800 is a superseded narrower automation hypothesis, not the general quote. Calculate hours, contingency and disclosed costs for each proposal."
     },
     {
       "title": "No employee in month one",
